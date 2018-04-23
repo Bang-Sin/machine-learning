@@ -11726,7 +11726,9 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}@media print {
+}
+
+@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11747,7 +11749,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11771,7 +11773,8 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11779,7 +11782,8 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11791,7 +11795,8 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11804,16 +11809,16 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[232]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span> <span class="c1"># Allows the use of display() for DataFrames</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span> <span class="c1"># Allows the use of display() for DataFrames</span>
 
 <span class="c1"># Import supplementary visualizations code visuals.py</span>
-<span class="kn">import</span> <span class="nn">visuals</span> <span class="k">as</span> <span class="nn">vs</span>
+<span class="kn">import</span> <span class="nn">visuals</span> <span class="kn">as</span> <span class="nn">vs</span>
 
 <span class="c1"># Pretty display for notebooks</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
@@ -11821,10 +11826,10 @@ div#notebook {
 <span class="c1"># Load the wholesale customers dataset</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;customers.csv&quot;</span><span class="p">)</span>
-    <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span> <span class="s1">&#39;Channel&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wholesale customers dataset has </span><span class="si">{}</span><span class="s2"> samples with </span><span class="si">{}</span><span class="s2"> features each.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Region&#39;</span><span class="p">,</span> <span class="s1">&#39;Channel&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Wholesale customers dataset has {} samples with {} features each.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 <span class="k">except</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dataset could not be loaded. Is the dataset missing?&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Dataset could not be loaded. Is the dataset missing?&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11836,9 +11841,7 @@ div#notebook {
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Wholesale customers dataset has 440 samples with 6 features each.
@@ -11850,7 +11853,8 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11862,10 +11866,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[233]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display a description of the dataset</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display a description of the dataset</span>
 <span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
 </pre></div>
 
@@ -11878,9 +11882,7 @@ div#notebook {
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -11994,7 +11996,8 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12005,15 +12008,15 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[234]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
 <span class="n">indices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">68</span><span class="p">,</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">401</span><span class="p">]</span>
 
 <span class="c1"># Create a DataFrame of the chosen samples</span>
-<span class="n">samples</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">indices</span><span class="p">],</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Chosen samples of wholesale customers dataset:&quot;</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">indices</span><span class="p">],</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Chosen samples of wholesale customers dataset:&quot;</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
 </pre></div>
 
@@ -12026,9 +12029,7 @@ div#notebook {
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Chosen samples of wholesale customers dataset:
@@ -12037,9 +12038,7 @@ div#notebook {
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12108,7 +12107,8 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12130,7 +12130,8 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12148,7 +12149,8 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12169,25 +12171,25 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[235]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
 <span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Frozen&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># TODO: Split the data into training and testing sets(0.25) using the given feature as the target</span>
 <span class="c1"># Set a random state.</span>
-<span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">new_data</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Frozen&#39;</span><span class="p">],</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
 
 <span class="c1"># TODO: Create a decision tree regressor and fit it to the training set</span>
-<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="k">import</span> <span class="n">DecisionTreeRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
 <span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
 <span class="n">regressor</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
 <span class="c1"># TODO: Report the score of the prediction using the testing set</span>
 <span class="n">score</span> <span class="o">=</span> <span class="n">regressor</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
-<span class="nb">print</span> <span class="n">score</span>
+<span class="k">print</span> <span class="n">score</span>
 </pre></div>
 
 </div>
@@ -12199,9 +12201,7 @@ div#notebook {
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>-0.409010735446
@@ -12213,7 +12213,8 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12227,7 +12228,8 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12244,7 +12246,8 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12255,10 +12258,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[236]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">diagonal</span> <span class="o">=</span> <span class="s1">&#39;kde&#39;</span><span class="p">);</span>
 </pre></div>
 
@@ -12271,9 +12274,7 @@ div#notebook {
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>C:\ProgramData\Anaconda2\lib\site-packages\ipykernel_launcher.py:2: FutureWarning: pandas.scatter_matrix is deprecated. Use pandas.plotting.scatter_matrix instead
@@ -12283,9 +12284,7 @@ div#notebook {
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -14025,7 +14024,8 @@ c84555xzzpXhnSXnnHPOOeecK8M7S84555xzzjlXxv8D7iIZnX3VP8AAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14042,11 +14042,11 @@ c84555xzzpXhnSXnnHPOOeecK8M7S84555xzzjlXxv8D7iIZnX3VP8AAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[237]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span>
-<span class="n">seaborn</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;pearson&#39;</span><span class="p">),</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span>
+<span class="n">seaborn</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;pearson&#39;</span><span class="p">),</span> <span class="n">annot</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -14058,22 +14058,18 @@ c84555xzzpXhnSXnnHPOOeecK8M7S84555xzzjlXxv8D7iIZnX3VP8AAAAAASUVORK5CYII=
 
 
 <div class="output_area">
-
-<div class="prompt output_prompt">Out[237]:</div>
-
+<div class="prompt output_prompt">Out[44]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xcff3160&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xbf39588&gt;</pre>
 </div>
 
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -14468,7 +14464,8 @@ rkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14487,7 +14484,8 @@ rkJggg==
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14496,7 +14494,8 @@ rkJggg==
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14512,10 +14511,10 @@ rkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[238]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
 <span class="n">log_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 <span class="c1"># TODO: Scale the sample data using the natural logarithm</span>
@@ -14534,9 +14533,7 @@ rkJggg==
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>C:\ProgramData\Anaconda2\lib\site-packages\ipykernel_launcher.py:8: FutureWarning: pandas.scatter_matrix is deprecated. Use pandas.plotting.scatter_matrix instead
@@ -14546,9 +14543,7 @@ rkJggg==
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -18585,7 +18580,8 @@ UOvgAAAAAElFTkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -18597,10 +18593,10 @@ UOvgAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[239]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
 <span class="n">display</span><span class="p">(</span><span class="n">log_samples</span><span class="p">)</span>
 </pre></div>
 
@@ -18613,9 +18609,7 @@ UOvgAAAAAElFTkSuQmCC
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -18684,7 +18678,8 @@ UOvgAAAAAElFTkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -18704,10 +18699,10 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[240]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For each feature find the data points with extreme high or low values</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># For each feature find the data points with extreme high or low values</span>
 <span class="n">all_outliers</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">log_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
@@ -18722,7 +18717,7 @@ Once you have performed this implementation, the dataset will be stored in the v
     <span class="n">step</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span><span class="p">)</span>
     
     <span class="c1"># Display the outliers</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data points considered outliers for the feature &#39;</span><span class="si">{}</span><span class="s2">&#39;:&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feature</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Data points considered outliers for the feature &#39;{}&#39;:&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feature</span><span class="p">))</span>
     <span class="n">display</span><span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="n">step</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="n">step</span><span class="p">))])</span>
 
     <span class="n">all_outliers</span> <span class="o">+=</span> <span class="n">log_data</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="n">step</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="n">step</span><span class="p">))]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -18741,10 +18736,10 @@ Once you have performed this implementation, the dataset will be stored in the v
 <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">index_count_dict</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">index_count_dict</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">&gt;=</span><span class="mi">2</span><span class="p">:</span>
         <span class="n">outliers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
-<span class="nb">print</span> <span class="s2">&quot;Outliers to be removed (in at least 2 features):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">outliers</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">&quot;Outliers to be removed (in at least 2 features):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">outliers</span><span class="p">)</span>
 
 <span class="c1"># Remove the outliers, if any were specified</span>
-<span class="n">good_data</span> <span class="o">=</span> <span class="n">log_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">log_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">outliers</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">good_data</span> <span class="o">=</span> <span class="n">log_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">log_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">outliers</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -18756,9 +18751,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data points considered outliers for the feature &#39;Fresh&#39;:
@@ -18767,9 +18760,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -18952,9 +18943,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data points considered outliers for the feature &#39;Milk&#39;:
@@ -18963,9 +18952,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -19040,9 +19027,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data points considered outliers for the feature &#39;Grocery&#39;:
@@ -19051,9 +19036,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -19110,9 +19093,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data points considered outliers for the feature &#39;Frozen&#39;:
@@ -19121,9 +19102,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -19252,9 +19231,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data points considered outliers for the feature &#39;Detergents_Paper&#39;:
@@ -19263,9 +19240,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -19322,9 +19297,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data points considered outliers for the feature &#39;Delicatessen&#39;:
@@ -19333,9 +19306,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -19500,9 +19471,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Outliers to be removed (in at least 2 features):
@@ -19515,7 +19484,8 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -19529,7 +19499,8 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -19548,7 +19519,8 @@ Yes, they are the data points with indices 65, 66, 75, 128, 154.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -19557,7 +19529,8 @@ Yes, they are the data points with indices 65, 66, 75, 128, 154.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -19573,11 +19546,11 @@ Yes, they are the data points with indices 65, 66, 75, 128, 154.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[241]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with the same number of dimensions as features</span>
-<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="k">import</span> <span class="n">PCA</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with the same number of dimensions as features</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
 <span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">good_data</span><span class="p">)</span>
 
 <span class="c1"># TODO: Transform log_samples using the PCA fit above</span>
@@ -19586,7 +19559,7 @@ Yes, they are the data points with indices 65, 66, 75, 128, 154.</p>
 <span class="c1"># Generate PCA results plot</span>
 <span class="n">pca_results</span> <span class="o">=</span> <span class="n">vs</span><span class="o">.</span><span class="n">pca_results</span><span class="p">(</span><span class="n">good_data</span><span class="p">,</span> <span class="n">pca</span><span class="p">)</span>
 
-<span class="nb">print</span> <span class="n">pca_results</span><span class="p">[</span><span class="s1">&#39;Explained Variance&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">pca_results</span><span class="p">[</span><span class="s1">&#39;Explained Variance&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -19598,9 +19571,7 @@ Yes, they are the data points with indices 65, 66, 75, 128, 154.</p>
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Dimension 1    0.4430
@@ -19615,9 +19586,7 @@ Name: Explained Variance, dtype: float64
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -19925,7 +19894,8 @@ SZIkSSqWgUiSJElSsQxEkiRJkoplIJIkSZJULAORJEmSpGL9DyNJfKgklYs0AAAAAElFTkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -19939,7 +19909,8 @@ SZIkSSqWgUiSJElSsQxEkiRJkoplIJIkSZJULAORJEmSpGL9DyNJfKgklYs0AAAAAElFTkSuQmCC
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -19961,18 +19932,19 @@ SZIkSSqWgUiSJElSsQxEkiRJkoplIJIkSZJULAORJEmSpGL9DyNJfKgklYs0AAAAAElFTkSuQmCC
 </li>
 </ul>
 <ul>
-<li><p>The first PC is "Dimension 1", the second PC is "Dimension 2", ..., and so on. They are orthogonal to each other and ranked by variances, e.g., the first PC has the max variance ("spread" value) of the data distribution. Each PC (direction) is a composition (or say combination) of the original (six) features, i.e., a composite new feature (dimension). For example, each PC in the visualization above is sum of the products of the six feature weights and the six feature values (in a respective production).</p>
-<p>For <strong>"Dimension 1"</strong>, the <strong>'Detergents_Paper', 'Grocery', and 'Milk'</strong> features are the major original features to composite it, and all of them have <strong>negative weights</strong>. Note that the three features are just the most high correlation pairs of features we discussed before. A positive increase in this dimension mainly represents the spending type of customers decreasing the spending amounts in 'Detergents_Paper', 'Grocery', and 'Milk'. The spending type (negative increase in the dimension) is like a retailer (grocery store).</p>
-<p>For <strong>"Dimension 2"</strong>, the major original features are <strong>'Fresh', 'Frozen', and 'Delicatessen'</strong> and all are <strong>negative weighted</strong>. A positive increase in this dimension mainly represents the spending type of customers decreasing the spending amounts in 'Fresh', 'Frozen', and 'Delicatessen'. The spending type (negative increase in the dimension) is like a traditional market.</p>
-<p>For <strong>"Dimension 3"</strong>, the major original features are <strong>'Fresh'(negative weight), 'Delicatessen'(positive weight), and 'Frozen'(positive weight)</strong>. A positive increase in this dimension mainly represents the spending type of customers decreasing the spending amount in 'Fresh' and increasing the spending amounts in 'Delicatessen' and 'Frozen'. The spending type (positive increase in the dimension) is like a restaurant.</p>
-<p>For <strong>"Dimension 4"</strong>, the major original features are <strong>'Frozen'(positive weight) and 'Delicatessen'(negative weight)</strong>. A positive increase in this dimension mainly represents the spending type of customers decreasing the spending amount in 'Delicatessen' and increasing the spending amount in 'Frozen'. The spending type (positive increase in the dimension) is like a fish seller.</p>
-</li>
+<li>The first PC is "Dimension 1", the second PC is "Dimension 2", ..., and so on. They are orthogonal to each other and ranked by variances, e.g., the first PC has the max variance ("spread" value) of the data distribution. Each PC (direction) is a composition (or say combination) of the original (six) features, i.e., a composite new feature (dimension). For example, each PC in the visualization above is sum of the products of the six feature weights and the six feature values (in a respective production). </li>
 </ul>
+<p>the first component would represent that we have some customers who purchase a lot of Milk, Grocery and Detergents_Paper products while other customers purchase very few amounts of Milk, Grocery and Detergents_Paper, hence spread in the data.</p>
+<p>For <strong>"Dimension 1"</strong>, the <strong>'Detergents_Paper', 'Grocery', and 'Milk'</strong> features are the major original features to composite the principle compoment, and all of them have <strong>negative weights</strong>. Note that the three features are just the most high correlation pairs of features we discussed before. This dimension mainly represents the overall spending behavior (correlation of features) and data variance of customers in 'Detergents_Paper', 'Grocery', and 'Milk'. Such a spending type is like a retailer (grocery store).</p>
+<p>For <strong>"Dimension 2"</strong>, the major original features are <strong>'Fresh', 'Frozen', and 'Delicatessen'</strong> and all are <strong>negative weighted</strong> to composite the PC. This dimension mainly represents the overall spending behavior and data variance of customers in 'Fresh', 'Frozen', and 'Delicatessen'. Such a spending type is like a traditional market.</p>
+<p>For <strong>"Dimension 3"</strong>, the major original features to composite this PC are <strong>'Fresh'(negative weight), 'Delicatessen'(positive weight), and 'Frozen'(positive weight)</strong>. This dimension mainly represents the overall spending behavior and data variance of customers in 'Fresh', 'Delicatessen' and 'Frozen'. Such a spending type is like a restaurant.</p>
+<p>For <strong>"Dimension 4"</strong>, the major original composed features are <strong>'Frozen'(positive weight) and 'Delicatessen'(negative weight)</strong>. This dimension mainly represents the overall spending behavior and data variance of customers in 'Delicatessen' and 'Frozen'. Such a spending type is like a fish seller.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -19983,10 +19955,10 @@ SZIkSSqWgUiSJElSsQxEkiRJkoplIJIkSZJULAORJEmSpGL9DyNJfKgklYs0AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[242]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display sample log-data after having a PCA transformation applied</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after having a PCA transformation applied</span>
 <span class="n">display</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">pca_samples</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">pca_results</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
 </pre></div>
 
@@ -19999,9 +19971,7 @@ SZIkSSqWgUiSJElSsQxEkiRJkoplIJIkSZJULAORJEmSpGL9DyNJfKgklYs0AAAAAElFTkSuQmCC
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -20070,7 +20040,8 @@ SZIkSSqWgUiSJElSsQxEkiRJkoplIJIkSZJULAORJEmSpGL9DyNJfKgklYs0AAAAAElFTkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -20087,10 +20058,10 @@ SZIkSSqWgUiSJElSsQxEkiRJkoplIJIkSZJULAORJEmSpGL9DyNJfKgklYs0AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[243]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with only two dimensions</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with only two dimensions</span>
 <span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">good_data</span><span class="p">)</span>
 
 <span class="c1"># TODO: Transform the good data using the PCA fit above</span>
@@ -20108,7 +20079,8 @@ SZIkSSqWgUiSJElSsQxEkiRJkoplIJIkSZJULAORJEmSpGL9DyNJfKgklYs0AAAAAElFTkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -20119,10 +20091,10 @@ SZIkSSqWgUiSJElSsQxEkiRJkoplIJIkSZJULAORJEmSpGL9DyNJfKgklYs0AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[244]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display sample log-data after applying PCA transformation in two dimensions</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after applying PCA transformation in two dimensions</span>
 <span class="n">display</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">pca_samples</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Dimension 1&#39;</span><span class="p">,</span> <span class="s1">&#39;Dimension 2&#39;</span><span class="p">]))</span>
 </pre></div>
 
@@ -20135,9 +20107,7 @@ SZIkSSqWgUiSJElSsQxEkiRJkoplIJIkSZJULAORJEmSpGL9DyNJfKgklYs0AAAAAElFTkSuQmCC
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -20190,7 +20160,8 @@ SZIkSSqWgUiSJElSsQxEkiRJkoplIJIkSZJULAORJEmSpGL9DyNJfKgklYs0AAAAAElFTkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -20202,10 +20173,10 @@ SZIkSSqWgUiSJElSsQxEkiRJkoplIJIkSZJULAORJEmSpGL9DyNJfKgklYs0AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[245]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a biplot</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a biplot</span>
 <span class="n">vs</span><span class="o">.</span><span class="n">biplot</span><span class="p">(</span><span class="n">good_data</span><span class="p">,</span> <span class="n">reduced_data</span><span class="p">,</span> <span class="n">pca</span><span class="p">)</span>
 </pre></div>
 
@@ -20218,22 +20189,18 @@ SZIkSSqWgUiSJElSsQxEkiRJkoplIJIkSZJULAORJEmSpGL9DyNJfKgklYs0AAAAAElFTkSuQmCC
 
 
 <div class="output_area">
-
-<div class="prompt output_prompt">Out[245]:</div>
-
+<div class="prompt output_prompt">Out[52]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xbe69dd8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xda5e6d8&gt;</pre>
 </div>
 
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -21269,7 +21236,8 @@ v7sGe+ecKxoAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -21287,7 +21255,8 @@ v7sGe+ecKxoAAAAASUVORK5CYII=
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -21296,7 +21265,8 @@ v7sGe+ecKxoAAAAASUVORK5CYII=
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -21310,7 +21280,8 @@ v7sGe+ecKxoAAAAASUVORK5CYII=
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -21332,7 +21303,8 @@ v7sGe+ecKxoAAAAASUVORK5CYII=
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -21354,11 +21326,11 @@ v7sGe+ecKxoAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[246]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.mixture</span> <span class="k">import</span> <span class="n">GaussianMixture</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">silhouette_score</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.mixture</span> <span class="kn">import</span> <span class="n">GaussianMixture</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">silhouette_score</span>
 
 <span class="c1">#n_clusters = range(2,11)</span>
 <span class="c1">#for n in n_clusters:</span>
@@ -21378,7 +21350,7 @@ v7sGe+ecKxoAAAAASUVORK5CYII=
 <span class="c1"># TODO: Calculate the mean silhouette coefficient for the number of clusters chosen</span>
 <span class="n">score</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">,</span> <span class="n">preds</span><span class="p">)</span>
 
-<span class="nb">print</span> <span class="n">score</span>
+<span class="k">print</span> <span class="n">score</span>
 <span class="c1">#print(&quot;{} clusters have score: {}&quot;.format(n, score))</span>
 </pre></div>
 
@@ -21391,9 +21363,7 @@ v7sGe+ecKxoAAAAASUVORK5CYII=
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>0.422324682646
@@ -21405,7 +21375,8 @@ v7sGe+ecKxoAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -21417,7 +21388,8 @@ v7sGe+ecKxoAAAAASUVORK5CYII=
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -21438,7 +21410,8 @@ v7sGe+ecKxoAAAAASUVORK5CYII=
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -21449,10 +21422,10 @@ v7sGe+ecKxoAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[247]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the results of the clustering from implementation</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the results of the clustering from implementation</span>
 <span class="n">vs</span><span class="o">.</span><span class="n">cluster_results</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">,</span> <span class="n">preds</span><span class="p">,</span> <span class="n">centers</span><span class="p">,</span> <span class="n">pca_samples</span><span class="p">)</span>
 </pre></div>
 
@@ -21465,9 +21438,7 @@ v7sGe+ecKxoAAAAASUVORK5CYII=
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -22101,7 +22072,8 @@ EXgAAAAAhBaBBwAAAEBoEXgAAAAAhBaBBwAAAEBo/f+i0z7X5ADCTgAAAABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -22117,17 +22089,17 @@ EXgAAAAAhBaBBwAAAEBoEXgAAAAAhBaBBwAAAEBo/f+i0z7X5ADCTgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[248]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Inverse transform the centers</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Inverse transform the centers</span>
 <span class="n">log_centers</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">centers</span><span class="p">)</span>
 
 <span class="c1"># TODO: Exponentiate the centers</span>
 <span class="n">true_centers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">log_centers</span><span class="p">)</span>
 
 <span class="c1"># Display the true centers</span>
-<span class="n">segments</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Segment </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">centers</span><span class="p">))]</span>
+<span class="n">segments</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Segment {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">centers</span><span class="p">))]</span>
 <span class="n">true_centers</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">true_centers</span><span class="p">),</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 <span class="n">true_centers</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">segments</span>
 <span class="n">display</span><span class="p">(</span><span class="n">true_centers</span><span class="p">)</span>
@@ -22142,9 +22114,7 @@ EXgAAAAAhBaBBwAAAEBoEXgAAAAAhBaBBwAAAEBo/f+i0z7X5ADCTgAAAABJRU5ErkJggg==
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -22206,10 +22176,10 @@ EXgAAAAAhBaBBwAAAEBoEXgAAAAAhBaBBwAAAEBo/f+i0z7X5ADCTgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[249]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
 </pre></div>
 
 </div>
@@ -22221,9 +22191,7 @@ EXgAAAAAhBaBBwAAAEBoEXgAAAAAhBaBBwAAAEBo/f+i0z7X5ADCTgAAAABJRU5ErkJggg==
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -22337,7 +22305,8 @@ EXgAAAAAhBaBBwAAAEBoEXgAAAAAhBaBBwAAAEBo/f+i0z7X5ADCTgAAAABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -22349,7 +22318,8 @@ EXgAAAAAhBaBBwAAAEBoEXgAAAAAhBaBBwAAAEBo/f+i0z7X5ADCTgAAAABJRU5ErkJggg==
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -22364,7 +22334,8 @@ EXgAAAAAhBaBBwAAAEBoEXgAAAAAhBaBBwAAAEBo/f+i0z7X5ADCTgAAAABJRU5ErkJggg==
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -22379,12 +22350,20 @@ EXgAAAAAhBaBBwAAAEBoEXgAAAAAhBaBBwAAAEBo/f+i0z7X5ADCTgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[250]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the predictions</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">true_centers</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
+
+<span class="c1"># Display the predictions</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">pred</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sample_preds</span><span class="p">):</span>
-    <span class="nb">print</span> <span class="s2">&quot;Sample point&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;predicted to be in Cluster&quot;</span><span class="p">,</span> <span class="n">pred</span>
+    <span class="k">print</span> <span class="s1">&#39;-------------------------------------------------------------&#39;</span>
+    <span class="k">print</span> <span class="s2">&quot;Sample point&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;predicted to be in Cluster&quot;</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;The distance between sample point {} and center of cluster {}:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">((</span><span class="n">samples</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">true_centers</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;The distance between sample point {} and center of cluster {}:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">((</span><span class="n">samples</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">true_centers</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
 </div>
@@ -22396,14 +22375,189 @@ EXgAAAAAhBaBBwAAAEBoEXgAAAAAhBaBBwAAAEBo/f+i0z7X5ADCTgAAAABJRU5ErkJggg==
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
 
 
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Segment 0</th>
+      <td>8939.0</td>
+      <td>2108.0</td>
+      <td>2758.0</td>
+      <td>2073.0</td>
+      <td>352.0</td>
+      <td>730.0</td>
+    </tr>
+    <tr>
+      <th>Segment 1</th>
+      <td>3567.0</td>
+      <td>7860.0</td>
+      <td>12249.0</td>
+      <td>873.0</td>
+      <td>4713.0</td>
+      <td>966.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2446</td>
+      <td>7260</td>
+      <td>3993</td>
+      <td>5870</td>
+      <td>788</td>
+      <td>3095</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5531</td>
+      <td>15726</td>
+      <td>26870</td>
+      <td>2367</td>
+      <td>13726</td>
+      <td>446</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>27167</td>
+      <td>2801</td>
+      <td>2128</td>
+      <td>13223</td>
+      <td>92</td>
+      <td>1902</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<div class="output_area">
+<div class="prompt"></div>
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Sample point 0 predicted to be in Cluster 0
-Sample point 1 predicted to be in Cluster 1
-Sample point 2 predicted to be in Cluster 0
+<pre>-------------------------------------------------------------
+Sample point 0 predicted to be in Cluster 0 
+
+The distance between sample point 0 and center of cluster 0:
+Fresh              -6493.0
+Milk                5152.0
+Grocery             1235.0
+Frozen              3797.0
+Detergents_Paper     436.0
+Delicatessen        2365.0
+dtype: float64
+The distance between sample point 0 and center of cluster 1:
+Fresh              -1121.0
+Milk                -600.0
+Grocery            -8256.0
+Frozen              4997.0
+Detergents_Paper   -3925.0
+Delicatessen        2129.0
+dtype: float64
+-------------------------------------------------------------
+Sample point 1 predicted to be in Cluster 1 
+
+The distance between sample point 1 and center of cluster 0:
+Fresh               -3408.0
+Milk                13618.0
+Grocery             24112.0
+Frozen                294.0
+Detergents_Paper    13374.0
+Delicatessen         -284.0
+dtype: float64
+The distance between sample point 1 and center of cluster 1:
+Fresh                1964.0
+Milk                 7866.0
+Grocery             14621.0
+Frozen               1494.0
+Detergents_Paper     9013.0
+Delicatessen         -520.0
+dtype: float64
+-------------------------------------------------------------
+Sample point 2 predicted to be in Cluster 0 
+
+The distance between sample point 2 and center of cluster 0:
+Fresh               18228.0
+Milk                  693.0
+Grocery              -630.0
+Frozen              11150.0
+Detergents_Paper     -260.0
+Delicatessen         1172.0
+dtype: float64
+The distance between sample point 2 and center of cluster 1:
+Fresh               23600.0
+Milk                -5059.0
+Grocery            -10121.0
+Frozen              12350.0
+Detergents_Paper    -4621.0
+Delicatessen          936.0
+dtype: float64
 </pre>
 </div>
 </div>
@@ -22412,7 +22566,8 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -22423,11 +22578,13 @@ Sample point 2 predicted to be in Cluster 0
 <li>Sample customer 2: I predict "traditional market" in Question 1 =&gt; Segment 0</li>
 </ul>
 <p>Yes, they are completely consistent to my expectation.</p>
+<p>Segment 0 has relatively higher 'Fresh' and 'Frozen' while segment 1 has relatively higher 'Milk', 'Grocery', and 'Detergents_Paper'. Look at the distance results between each of the three sample customers and the centers of clusters (segments). Sample 0 is a little more near to center of cluster 0 than center of cluster 1 in the distance results above and also the cluster visualization figure above, hence it is classified in segment 0, which is the same as what I predicted before. For sample 1, it is obviously much more near to center of cluster 1 than center of cluster 0, thus it is classified in segment 1 and also consistent to my prediction. Similarly, sample 2 is obviously much more near to center of cluster 0 than center of cluster 1, so it is in segment 0 in both my prediction and the results above.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -22435,7 +22592,8 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -22444,7 +22602,8 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -22457,17 +22616,20 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>The wholesale distributor wants to change their delivery service from a morning five days a week to a cheaper evening three days a week. From the clusters we obtained above, segment 0 is majorly composed of the type of restaurents or traditional markets. The customers in this group usually need to make sure their purchasing commodities fresh and thus to be delivered instantly for their convenience and their business characteristic. Hence we can expect that the changed delivery service of a cheaper evening three days a week may greatly make the customers in segment 0 inconvenient and they will react negatively and complain. For the customers in segment 1, they are most the type of retailers (grocery stores). This group of customers usually doesn't need to ensure their purchasing commodities fresh or to be delivered instantly because of their business characteristic and the property of commodities. So we can also expect that the changed delivery service of an evening three days a week will make them happy and affect them positively due to the cheaper cost of deliever service. So such a service change will not affect all customers equally.</p>
+<p>The wholesale distributor wants to change their delivery service from a morning five days a week to a cheaper evening three days a week. From the clusters we obtained above, segment 0 is majorly composed of the type of restaurents or traditional markets. The customers in this group usually need to make sure their purchasing commodities fresh and thus to be delivered instantly for their convenience and their business characteristic. Hence we can expect that the changed delivery service of a cheaper evening three days a week may greatly make the customers in segment 0 inconvenient and they will react negatively and may complain. For the customers in segment 1, they are most the type of retailers (grocery stores). This group of customers usually doesn't need to ensure their purchasing commodities fresh or to be delivered instantly because of their business characteristic and the property of commodities, in other words, the cycle or period of delivery could be longer. So we can also expect that the changed delivery service of an evening three days a week will make them happy and affect them positively due to the cheaper cost of deliever service. So in my expectation, such a service change will not affect all customers equally.</p>
+<p>The wholesale distributor can design A/B test to verify the above-mentioned intuitions/hypotheses. Since the two segments represent different types of spending behaviors of customers, the wholesale distributor can apply A/B test (the original 5 days a week and the changed 3 days a week delivery services) on both segment 0 and segment 1 separately and independently. To do this, first the wholesale distributor can select a sampling subset from each of the two segments/clusters to be the experimental group (the remaining non-chosen customers are in the control group). Then the distributor can apply the changed delivery services on the experimental groups of different customent segments. After one week (for example), the wholesale distributor can observe and compare the results, which are like the responses or feedbacks of customers, between the control and the experimental groups in each of the customer segments. The wholesale distributor can analyze the statistical results of A/B test to find more meaningful conclusions or insights such as impact degree on each customer segment.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -22480,7 +22642,8 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -22490,7 +22653,8 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -22502,10 +22666,10 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[251]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the clustering results based on &#39;Channel&#39; data</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the clustering results based on &#39;Channel&#39; data</span>
 <span class="n">vs</span><span class="o">.</span><span class="n">channel_results</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">,</span> <span class="n">outliers</span><span class="p">,</span> <span class="n">pca_samples</span><span class="p">)</span>
 </pre></div>
 
@@ -22518,9 +22682,7 @@ Sample point 2 predicted to be in Cluster 0
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -23167,7 +23329,8 @@ AAAAAElFTkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -23180,7 +23343,8 @@ AAAAAElFTkSuQmCC
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -23197,7 +23361,8 @@ AAAAAElFTkSuQmCC
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
