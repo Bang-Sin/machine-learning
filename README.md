@@ -8,10 +8,10 @@ https://www.kaggle.com/c/state-farm-distracted-driver-detection
 (Data: https://www.kaggle.com/c/state-farm-distracted-driver-detection/data)
 
 - imgs.zip - zipped folder of all (train/test) images
-* https://www.kaggle.com/c/state-farm-distracted-driver-detection/download/imgs.zip
+  https://www.kaggle.com/c/state-farm-distracted-driver-detection/download/imgs.zip
 
 - sample_submission.csv - a sample submission file in the correct format
-* https://www.kaggle.com/c/state-farm-distracted-driver-detection/download/sample_submission.csv.zip
+  https://www.kaggle.com/c/state-farm-distracted-driver-detection/download/sample_submission.csv.zip
 
 - driver_imgs_list.csv - a list of training images, their subject (driver) id, and class id
 
