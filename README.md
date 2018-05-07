@@ -14,7 +14,8 @@ https://www.kaggle.com/c/state-farm-distracted-driver-detection
 * https://www.kaggle.com/c/state-farm-distracted-driver-detection/download/sample_submission.csv.zip
 
 - driver_imgs_list.csv - a list of training images, their subject (driver) id, and class id
-* https://www.kaggle.com/c/state-farm-distracted-driver-detection/download/driver_imgs_list.csv.zip
+
+  https://www.kaggle.com/c/state-farm-distracted-driver-detection/download/driver_imgs_list.csv.zip
 
 ### Operate the following steps:
 1. Put the train data set 'imgs/train' near to distracted_driver_detection.ipynb
