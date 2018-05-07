@@ -1,21 +1,22 @@
-# Udacity machine learning capstone project
-## Project topic: State Farm Distracted Driver Detection
+# Udacity Machine Learning Capstone Project
+## Project Topic: State Farm Distracted Driver Detection
 https://www.kaggle.com/c/state-farm-distracted-driver-detection
 
 
 
-## Download and unzip the data sets:
-(https://www.kaggle.com/c/state-farm-distracted-driver-detection/data)
+## Download and Unzip the Data Sets:
+(Data: https://www.kaggle.com/c/state-farm-distracted-driver-detection/data)
 
 - imgs.zip - zipped folder of all (train/test) images
-  https://www.kaggle.com/c/state-farm-distracted-driver-detection/download/imgs.zip
+* https://www.kaggle.com/c/state-farm-distracted-driver-detection/download/imgs.zip
 
 - sample_submission.csv - a sample submission file in the correct format
-  https://www.kaggle.com/c/state-farm-distracted-driver-detection/download/sample_submission.csv.zip
+* https://www.kaggle.com/c/state-farm-distracted-driver-detection/download/sample_submission.csv.zip
 
 - driver_imgs_list.csv - a list of training images, their subject (driver) id, and class id
-  https://www.kaggle.com/c/state-farm-distracted-driver-detection/download/driver_imgs_list.csv.zip
+* https://www.kaggle.com/c/state-farm-distracted-driver-detection/download/driver_imgs_list.csv.zip
 
+### Operate the following steps:
 1. Put the train data set 'imgs/train' near to distracted_driver_detection.ipynb
 2. Put the test data set 'imgs/test' to **'imgs/test/test'** near to distracted_driver_detection.ipynb
 3. Create 'submission' folder near to distracted_driver_detection.ipynb for store output results of CNN models.
@@ -29,4 +30,4 @@ https://www.kaggle.com/c/state-farm-distracted-driver-detection
 - Keras
 - Numpy
 - Pandas
-- scikit-learn
+- Scikit-learn
