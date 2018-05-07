@@ -23,8 +23,13 @@ https://www.kaggle.com/c/state-farm-distracted-driver-detection/download/driver_
 
 # Software and libraries:
 • Anaconda 3 (or Python 3.5 - Jupyter Notebook)
+
 • Tensorflow
+
 • Keras
+
 • Numpy
+
 • Pandas
+
 • scikit-learn
